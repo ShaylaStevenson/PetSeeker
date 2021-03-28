@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Kraken",
+    "animal_type": "cat",
+    "breed": "Domestic Short Hair",
+    "description": "Destroyer of planets. And a great mouser.",
+    "age": "4 years",
+    "gender": "female",
+    "size": "small < 15 lbs",
+    "good_with_kids": "unknown",
+    "good_with_cats": "no",
+    "good_with_dogs": "yes",
+    "zodiac": "Taurus",
+    "special_needs": "no",
+    "adoptable_now": "yes",
+    "contact_email": "pets4free@hotmail.com",
+    "user_id": 1,
+    "comments": ["Beautifully menacing.", "She looks scary."]
+  },
+  {
+    "name": "Toast",
+    "animal_type": "dog",
+    "breed": "Labrador mix",
+    "description": "Needing a new home with a nicer cat",
+    "age": "8 months",
+    "gender": "female",
+    "size": "large 50 - 70 lbs",
+    "good_with_kids": "yes",
+    "good_with_cats": "yes",
+    "good_with_dogs": "yes",
+    "zodiac": "Cancer",
+    "special_needs": "no",
+    "adoptable_now": "yes",
+    "contact_email": "pets4free@hotmail.com",
+    "user_id": 1,
+    "comments": ["Why so serious?", "She looks scared."]
+  }
+]
