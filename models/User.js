@@ -38,7 +38,7 @@ User.init(
     },
     // added new column to determine if the user is a shelter or not
     // if so, potential -wishlist- features for link to website or donation opportunity? 
-    Shelter: {
+    shelter: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
     },

@@ -7,15 +7,15 @@
     "age": "4 years",
     "gender": "female",
     "size": "small < 15 lbs",
-    "good_with_kids": "unknown",
-    "good_with_cats": "no",
-    "good_with_dogs": "yes",
+    "good_with_kids": false,
+    "good_with_cats": false,
+    "good_with_dogs": true,
     "zodiac": "Taurus",
-    "special_needs": "no",
-    "adoptable_now": "yes",
+    "special_needs": false,
+    "adoptable_now": true,
     "contact_email": "pets4free@hotmail.com",
     "user_id": 1,
-    "comments": ["Beautifully menacing.", "She looks scary."]
+    "comments": "Beautifully menacing."
   },
   {
     "name": "Toast",
@@ -25,14 +25,14 @@
     "age": "8 months",
     "gender": "female",
     "size": "large 50 - 70 lbs",
-    "good_with_kids": "yes",
-    "good_with_cats": "yes",
-    "good_with_dogs": "yes",
+    "good_with_kids": true,
+    "good_with_cats": true,
+    "good_with_dogs": false,
     "zodiac": "Cancer",
-    "special_needs": "no",
-    "adoptable_now": "yes",
+    "special_needs": false,
+    "adoptable_now": true,
     "contact_email": "pets4free@hotmail.com",
     "user_id": 1,
-    "comments": ["Why so serious?", "She looks scared."]
+    "comments": "Why so serious?"
   }
 ]

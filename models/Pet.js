@@ -62,7 +62,7 @@ Pet.init(
     // instead of listing it in pet details since it is not applicable for most pets.
     special_needs: {
         type: DataTypes.BOOLEAN,
-        allowedNull
+        allowedNull: true
     },
     // added adoptable_now column
     // that way babies that are too young or pics of recently homed pets can still be posted for fun
