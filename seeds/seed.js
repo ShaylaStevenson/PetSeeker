@@ -1,27 +1,19 @@
-// base code from mini project
 const sequelize = require('../config/connection');
-const { User, Pet } = require('../models');
 
-const userData = require('./userData.json');
-const petData = require('./petData.json');
+const seedPet = require('./pet-seeds');
+const seedUser = require('./user-seeds');
 
-// caution! if returning an empty array, try switching this to 'false'
-const seedDatabase = async () => {
+const seedAll = async () => {
   await sequelize.sync({ force: true });
+  console.log('\n----- DATABASE SYNCED -----\n');
 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  await seedUser();
+  console.log('\n----- USERS SEEDED -----\n');
 
-  for (const pet of petData) {
-    await Pet.create({
-      ...pet,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  await seedPet();
+  console.log('\n----- PETS SEEDED -----\n');
 
   process.exit(0);
 };
 
-seedDatabase();
+seedAll();
