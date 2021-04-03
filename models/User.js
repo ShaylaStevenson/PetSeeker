@@ -38,10 +38,11 @@ User.init(
     },
     // added new column to determine if the user is a shelter or not
     // if so, potential -wishlist- features for link to website or donation opportunity? 
-    shelter: {
-        type: DataTypes.BOOLEAN,
-        allowNull: true,
-    },
+
+    // shelter: {
+    //     type: DataTypes.BOOLEAN,
+    //     allowNull: false,
+    // },
   },
   // base code from mini project to CREATE and UPDATE passwords
   // we can discuss if we want to include that option
