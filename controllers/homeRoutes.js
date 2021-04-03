@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Pet, User, Comment } = require('../models');
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -66,9 +66,9 @@ router.get('/Pet/:id', async (req, res) => {
     console.log('petid')
   }
 });
-
+//what do we know about the user? to get 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -84,7 +84,7 @@ router.get('/profile', async (req, res) => {
     });
   } catch (err) {
     res.status(500).json(err);
-    //console.log(userData)
+    console.log(err)
   }
 });
 
