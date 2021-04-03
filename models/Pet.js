@@ -90,11 +90,6 @@ Pet.init(
         model: 'user',
         key: 'id',
       },
-    },
-    // not sure if this is being seeded correctly in petData.Json?
-    comments: {
-        type: DataTypes.STRING,
-        allowNull: true,
     }
   },
   {

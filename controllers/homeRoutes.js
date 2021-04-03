@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Pet, User, Comment } = require('../models');
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -13,10 +13,10 @@ router.get('/', async (req, res) => {
         },
         {
           model: Comment,
-                attributes: ['content', 'created_at'],
+                attributes: ['content'],
                 include: {
                     model: User,
-                    attributes: ['username']
+                    attributes: ['name']
                   }
         }
       ],
@@ -46,10 +46,10 @@ router.get('/Pet/:id', async (req, res) => {
         },
         {
           model: Comment,
-                attributes: ['content', 'created_at'],
+                attributes: ['content'],
                 include: {
                     model: User,
-                    attributes: ['username']
+                    attributes: ['name']
                   }
         }
       ],
@@ -57,7 +57,7 @@ router.get('/Pet/:id', async (req, res) => {
 
     const pet = petData.get({ plain: true });
 
-    res.render('project', {
+    res.render('pets', {
       ...pet,
       logged_in: req.session.logged_in
     });
@@ -68,7 +68,7 @@ router.get('/Pet/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
