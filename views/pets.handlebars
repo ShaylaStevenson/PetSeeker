@@ -1,0 +1,21 @@
+<div class="col-md-6">
+  <h2>Name: {{name}}</h2>
+  <ul>
+    <li>Species: {{animal_type}}</li>
+    <li>Breed: {{breed}}</li>
+    <li>Age: {{age}}</li>
+    <li>Gender: {{gender}}</li>
+    <li>Size: {{size}}</li>
+    <li>Zodiac: {{zodiac}}</li>
+  </ul>
+  <p>{{description}}</p>
+  <p>Comments: {{Comments.length}}</p>
+  {{> comments Pets.Comments}}
+  <div class="form-group">
+        <label for="description">Add a Comment:</label>
+        <textarea class="form-input" id="description" name="description"></textarea>
+      </div>
+  
+    <button class="btn btn-primary">Fund this Project!</button>
+  </p>
+</div> 
