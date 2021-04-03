@@ -16,8 +16,7 @@ const petData = [
     "special_needs": false,
     "adoptable_now": true,
     "contact_email": "pets4free@hotmail.com",
-    "user_id": 1,
-    "comments": "Beautifully menacing."
+    "user_id": 1
   },
   {
     "name": "Toast",
@@ -34,8 +33,7 @@ const petData = [
     "special_needs": false,
     "adoptable_now": true,
     "contact_email": "pets4free@hotmail.com",
-    "user_id": 1,
-    "comments": "Why so serious?"
+    "user_id": 1
   }
 ]
 const seedPet = () => Pet.bulkCreate(petData);
