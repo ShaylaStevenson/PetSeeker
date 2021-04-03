@@ -11,106 +11,78 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Pet Seeker Palooza</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">login</a>
-      </li>
 
+  <!--<div class="flex-column justify-space-around"> -->
 
-      <!-- Conditionally render login or logout links -->
-        {{!-- {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}} --}}
-
-    
-      <li class="nav-item dropdown">
-        <form class="form-inline my-2 my-lg-0">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-          
-
-          <div class="form-check dropdown-item">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-            <label class="form-check-label" for="flexCheckIndeterminate">
-              Adoptable now
-            </label>
-          </div>
-
-          <div class="form-check dropdown-item">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-            <label class="form-check-label" for="flexCheckIndeterminate">
-              Good with kids
-            </label>
-          </div>
-
-          <div class="form-check dropdown-item">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-            <label class="form-check-label" for="flexCheckIndeterminate">
-              Good with dogs
-            </label>
-          </div>
-
-          <div class="form-check dropdown-item">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-            <label class="form-check-label" for="flexCheckIndeterminate">
-              Good with cats
-            </label>
-          </div>
-
-          <div class="form-check dropdown-item">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-            <label class="form-check-label" for="flexCheckIndeterminate">
-              Special Needs
-            </label>
-          </div>
+    <header>
+      <nav class="navbar navbar-fluid navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Pet Seeker Palooza</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="/profile">profile</a>
+              <!-- Conditionally render login or logout links -->
+              {{#if logged_in}}
+              <button class="no-button" id="logout">logout</button>
+              {{else}}
+              <a href="/login">login</a>
+              {{/if}}
+            </li>
       
-        </div>
-     
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </li>
-      
+            <li class="nav-item dropdown">
+              <form class="form-inline my-2 my-lg-0">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <div class="form-check dropdown-item">
+                <input class="form-check-input" type="checkbox" value="" id="adoptableNow">
+                <label class="form-check-label" for="adoptableNow">
+                  Adoptable now
+                </label>
+              </div>
 
-    </ul>
-  </div>
-</nav>
+              <div class="form-check dropdown-item">
+                <input class="form-check-input" type="checkbox" value="" id="goodWithKids">
+                <label class="form-check-label" for="goodWithKids">
+                  Good with kids
+                </label>
+              </div>
 
+              <div class="form-check dropdown-item">
+                <input class="form-check-input" type="checkbox" value="" id="goodWithDogs">
+                <label class="form-check-label" for="goodWithDogs">
+                  Good with dogs
+                </label>
+              </div>
 
+              <div class="form-check dropdown-item">
+                <input class="form-check-input" type="checkbox" value="" id="goodWithCats">
+                <label class="form-check-label" for="goodWithCats">
+                  Good with cats
+                </label>
+              </div>
 
+              <div class="form-check dropdown-item">
+                <input class="form-check-input" type="checkbox" value="" id="specialNeeds">
+                <label class="form-check-label" for="specialNeeds">
+                  Special Needs
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </li>
+        
 
-
-
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      {{!-- <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav> --}}
+          </ul>
+        
+      </nav>
     </header>
+
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
