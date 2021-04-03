@@ -40,7 +40,7 @@ User.init(
     // if so, potential -wishlist- features for link to website or donation opportunity? 
     shelter: {
         type: DataTypes.BOOLEAN,
-        allowNull: false,
+        allowNull: true,
     },
   },
   // base code from mini project to CREATE and UPDATE passwords
