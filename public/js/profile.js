@@ -1,9 +1,9 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#pet-name').value.trim();
+  const name = document.querySelector('#name').value.trim();
   
-  const description = document.querySelector('#pet-desc').value.trim();
+  const description = document.querySelector('#description').value.trim();
 
   if (name && description) {
     const response = await fetch(`/api/pet`, {
