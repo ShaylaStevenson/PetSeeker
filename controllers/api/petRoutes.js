@@ -66,6 +66,20 @@ router.get('/:id', (req, res) => {
           'contact_email',
           'user_id'
       ],
+      include: [
+        {
+          model: User,
+          attributes: ['name']
+        },
+        {
+          model: Comment,
+          attributes: ['id', 'content', 'user_id', 'pet_id'],
+                include: {
+                    model: User,
+                    attributes: ['name']
+                }
+        }
+      ],
   })
   .then(commentData => res.json(commentData))
   .catch(err => {

@@ -2,9 +2,8 @@
     {{#each this}}
     <section class="comment">
         <div class='username'>
-            {{User.name}}
+            {{Pet.user_id.name}}
         </div>
-        <div class="time-stamp">{{timeStamp created_at}}</div>
         <div class="comment-content">
             {{content}}
         </div>
