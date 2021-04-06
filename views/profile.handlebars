@@ -4,20 +4,34 @@
   </div>
 </div>
 
-{{#if pets.length}}
-<section>
-  <h2>Your Pets</h2>
-    {{#each pets as |pet|}}
-      <!--{{> dashboard-postinfo post}}-->
-    {{/each}}
 
-</section>
-{{/if}}
+<div class="row m-3">
+  <div class="col-md bg-secondary">
+    <h2 class="bg-info" style="text-align: center;">Your Pets</h2>
+    <button type="submit" class="btn m-3" style="width:100%"><a class="link" href="/profile/new">Add New Pet</a></button>
 
-<button type="submit" class="btn"><a class="link" href="/profile/new">New Pet</a></button>
+    {{#if pets.length}}
+      <section>
+          {{#each pets as |pet|}}
+            <!--need pet details here-->
+          {{/each}}
+      </section>
+    {{/if}}
+  </div>
+
+  <div class="col-md bg-secondary">
+    <h2 class="bg-info" style="text-align: center;">Favorites</h2>
+    <p>
+      This is just a thought.
+      Also, please forgive rough styling, just "sketching"-shayla
+    </p>
+  </div>
+</div>
 
 <script src="/js/add-pet.js"></script>
 
+
+<!--===========original form=================-->
 <!--<h3 style="text-align: center;">Add New Pet:</h3>
 
 <hr>
