@@ -4,7 +4,35 @@
   </div>
 </div>
 
-<h3 style="text-align: center;">Add New Pet:</h3>
+
+<div class="row m-3">
+  <div class="col-md bg-secondary">
+    <h2 class="bg-info" style="text-align: center;">Your Pets</h2>
+    <button type="submit" class="btn m-3" style="width:100%"><a class="link" href="/profile/new">Add New Pet</a></button>
+
+    {{#if pets.length}}
+      <section>
+          {{#each pets as |pet|}}
+            <!--need pet details here-->
+          {{/each}}
+      </section>
+    {{/if}}
+  </div>
+
+  <div class="col-md bg-secondary">
+    <h2 class="bg-info" style="text-align: center;">Favorites</h2>
+    <p>
+      This is just a thought.
+      Also, please forgive rough styling, just "sketching"-shayla
+    </p>
+  </div>
+</div>
+
+<script src="/js/add-pet.js"></script>
+
+
+<!--===========original form=================-->
+<!--<h3 style="text-align: center;">Add New Pet:</h3>
 
 <hr>
 
@@ -150,7 +178,7 @@
         <input class="form-input" type="text" id="contact_email" name="contact_email" />
       </div>
 
-        <!--<div class="form-group width='400px' height='200'">
+        <div class="form-group width='400px' height='200'">
         <div class="row">
           <div class="col-sm-8 mt-3">
 
@@ -182,7 +210,7 @@
             </div>
           </div>
         </div>
-      </div>-->
+      </div>
 
       <div class="form-group">
         <button type="submit" form="newPetForm" class="btn btn-primary">Create</button>
@@ -216,8 +244,8 @@
   <br>
 </footer>
 
-{{!-- 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> --}}
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="./js/profile.js"></script>
+<script src="./js/profile.js"></script>-->
 

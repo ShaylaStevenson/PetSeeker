@@ -1,0 +1,134 @@
+<div class="card">
+    <h3 class="card-header">Create New Pet</h3>
+    <form class="card-body new-pet-form" id="new-pet-form">
+
+        <div class="row">
+            <div class="col-md">
+                <label for="name" class="form-label">Name</label><br>
+                <input type="text" id="name" name="name" class="form-input" />
+
+                <div class="form-group">
+                    <label for="animal_type" class="form-label">Species</label><br>
+                
+                    <input type="radio" id="animal_type" name="animal_type" value="dog">
+                    <label for="dog">Dog</label><br>
+                    
+                    <input type="radio" id="animal_type" name="animal_type" value="cat">
+                    <label for="cat">Cat</label><br>
+                    
+                    <input type="radio" id="animal_type" name="animal_type" value="other">
+                    <label for="other">Other</label><br>
+                </div>
+
+                <label for="breed" class="form-label">Breed</label><br>
+                <input type="text" id="breed" name="breed" class="form-input" />
+
+                <div class="form-group">
+                    <label for="age" class="form-label">Age</label><br>
+
+                    <input type="radio" name="age" value="young">
+                    <label for="young">Young (0-2 years old)</label><br>
+                    
+                    <input type="radio" name="age" value="mature">
+                    <label for="mature">Mature (2-8 years old)</label><br>
+
+                    <input type="radio" name="age" value="senior">
+                    <label for="senior">Senior (8+ years old)</label><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender" class="form-label">Gender</label><br>
+
+                    <input type="radio" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    
+                    <input type="radio" name="gender" value="male">
+                    <label for="male">Male</label><br> 
+                </div>
+
+                <div class="form-group">
+                    <label for="size" class="form-label">Size</label><br>
+
+                    <input type="radio" id="size" name="size" value="small">
+                    <label for="small">Small (less than 25 lbs)</label><br>
+
+                    <input type="radio" id="size" name="size" value="medium">
+                    <label for="medium">Medium (25-50 lbs)</label><br>
+
+                    <input type="radio" id="size" name="size" value="large">
+                    <label for="large">Large (50+ lbs)</label><br>  
+                </div>
+            </div>
+            <div class="col-md">
+                <input type="checkbox" id="good_with_kids" name="good_with_kids" value="true" />
+                <label for="good_with_kids" class="form-label">Good with kids</label><br>
+                
+                <input type="checkbox" id="good_with_dogs" name="good_with_dogs" value="true" />
+                <label for="good_with_dogs" class="form-label">Good with dogs</label><br>
+                
+                <input type="checkbox" id="good_with_cats" name="good_with_cats" value="true" />
+                <label for="good_with_cats" class="form-label">Good with cats</label><br>
+                
+                <div class="form-group">
+                    <label for="zodiac" class="form-label">Zodiac</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="capricorn">
+                    <label for="capricorn">Capricorn</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="aquarius">
+                    <label for="aquarius">Aquarius</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="pisces">
+                    <label for="pisces">Pisces</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="aries">
+                    <label for="aries">Aries</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="taurus">
+                    <label for="taurus">Taurus</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="gemini">
+                    <label for="gemini">Gemini</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="cancer">
+                    <label for="cancer">Cancer</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="leo">
+                    <label for="leo">Leo</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="virgo">
+                    <label for="virgo">Virgo</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="libra">
+                    <label for="libra">Libra</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="scorpio">
+                    <label for="scorpio">Scorpio</label><br>
+
+                    <input type="radio" id="zodiac" name="zodiac" value="sagittarius">
+                    <label for="sagittarius">Sagittarius</label><br>
+                </div>
+
+                <input type="checkbox" id="special_needs" name="special_needs" value="true" />
+                <label for="special_needs" class="form-label">Special needs</label><br>
+                
+                <input type="checkbox" id="adoptable_now" name="adoptable_now" value="true" />
+                <label for="adoptable_now" class="form-label">Adoptable now</label><br>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <label for="description" class="form-label">Description</label><br>
+                <textarea type="text" id="description" name="description" rows="5" class="form-input"></textarea>
+                    
+                <label for="contact_email" class="form-label">Contact email</label><br>
+                <input type="text" id="contact_email" name="contact_email" class="form-input" />
+                    
+                <button type="submit" class="btn bg-success">Create</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../public/js/add-pet.js"></script>
