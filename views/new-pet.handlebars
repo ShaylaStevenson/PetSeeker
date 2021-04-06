@@ -1,0 +1,94 @@
+<div class="card">
+    <h3 class="card-header">Create New Pet</h3>
+    <form class="card-body new-pet-form" id="new-pet-form">
+
+        <label for="name" class="form-label">Name</label><br>
+        <input type="text" id="name" name="name" class="form-input" />
+
+        <label for="animal_type" class="form-label">Species</label><br>
+        
+        <input type="radio" id="animal_type" name="animal_type" value="dog">
+        <label for="dog">Dog</label><br>
+        
+        <input type="radio" id="animal_type" name="animal_type" value="cat">
+        <label for="cat">Cat</label><br>
+        
+        <input type="radio" id="animal_type" name="animal_type" value="other">
+        <label for="other">Other</label><br>
+        
+        <label for="breed" class="form-label">Breed</label><br>
+        <input type="text" id="breed" name="breed" class="form-input" />
+
+        <label for="description" class="form-label">Description</label><br>
+        <input type="text" id="description" name="description" class="form-input" />
+
+        <label for="age" class="form-label">Age</label><br>
+        <input type="text" id="age" name="age" class="form-input" />
+
+        <label for="gender" class="form-label">Gender</label><br>
+        <label for="female">Female</label><br>
+        <input type="radio" name="gender" value="female">
+        <label for="male">Male</label><br>
+        <input type="radio" name="gender" value="male">
+
+        <label for="size" class="form-label">Size</label><br>
+        <label for="x-small">X-Small (less than 15lbs)</label><br>
+        <input type="radio" id="size" name="size" value="x-small">
+        <label for="small">Small (15-30lbs)</label><br> 
+        <input type="radio" id="size" name="size" value="small">
+        <label for="medium">Medium (30-45lbs)</label><br>
+        <input type="radio" id="size" name="size" value="medium">
+        <label for="large">Large (45-60lbs)</label><br>
+        <input type="radio" id="size" name="size" value="large">
+        <label for="x-large">X-Large (Greater than 60lbs)</label><br>
+        <input type="radio" id="size" name="size" value="x-large">
+        
+        <label for="good_with_kids" class="form-label">Good with kids</label><br>
+        <input type="checkbox" id="good_with_kids" name="good_with_kids" value="true" /><br>
+
+        <label for="good_with_dogs" class="form-label">Good with dogs</label><br>
+        <input type="checkbox" id="good_with_dogs" name="good_with_dogs" value="true" /><br>
+
+        <label for="good_with_cats" class="form-label">Good with cats</label><br>
+        <input type="checkbox" id="good_with_cats" name="good_with_cats" value="true" /><br>
+
+        <label for="zodiac" class="form-label">Zodiac</label><br>
+        <label for="capricorn">Capricorn</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="capricorn">
+        <label for="aquarius">Aquarius</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="aquarius">
+        <label for="pisces">Pisces</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="pisces">
+        <label for="aries">Aries</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="aries">
+        <label for="taurus">Taurus</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="taurus">
+        <label for="gemini">Gemini</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="gemini">
+        <label for="cancer">Cancer</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="cancer">
+        <label for="leo">Leo</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="leo">
+        <label for="virgo">Virgo</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="virgo">
+        <label for="libra">Libra</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="libra">
+        <label for="scorpio">Scorpio</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="scorpio">
+        <label for="sagittarius">Sagittarius</label><br>
+        <input type="radio" id="zodiac" name="zodiac" value="sagittarius">
+        
+        <label for="special_needs" class="form-label">Special needs</label><br>
+        <input type="checkbox" id="special_needs" name="special_needs" value="true" /><br>
+
+        <label for="adoptable_now" class="form-label">Adoptable now</label><br>
+        <input type="checkbox" id="adoptable_now" name="adoptable_now" value="true" /><br>
+
+        <label for="contact_email" class="form-label">Contact email</label><br>
+        <input type="text" id="contact_email" name="contact_email" class="form-input" /><br>
+
+        <button type="submit" class="btn">Create</button>
+    </form>
+</div>
+
+<script src="../public/js/add-pet.js"></script>

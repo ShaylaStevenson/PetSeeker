@@ -4,7 +4,21 @@
   </div>
 </div>
 
-<h3 style="text-align: center;">Add New Pet:</h3>
+{{#if pets.length}}
+<section>
+  <h2>Your Pets</h2>
+    {{#each pets as |pet|}}
+      <!--{{> dashboard-postinfo post}}-->
+    {{/each}}
+
+</section>
+{{/if}}
+
+<button type="submit" class="btn"><a class="link" href="/profile/new">New Pet</a></button>
+
+<script src="/js/add-pet.js"></script>
+
+<!--<h3 style="text-align: center;">Add New Pet:</h3>
 
 <hr>
 
@@ -150,7 +164,7 @@
         <input class="form-input" type="text" id="contact_email" name="contact_email" />
       </div>
 
-        <!--<div class="form-group width='400px' height='200'">
+        <div class="form-group width='400px' height='200'">
         <div class="row">
           <div class="col-sm-8 mt-3">
 
@@ -182,7 +196,7 @@
             </div>
           </div>
         </div>
-      </div>-->
+      </div>
 
       <div class="form-group">
         <button type="submit" form="newPetForm" class="btn btn-primary">Create</button>
@@ -216,8 +230,8 @@
   <br>
 </footer>
 
-{{!-- 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> --}}
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="./js/profile.js"></script>
+<script src="./js/profile.js"></script>-->
 
