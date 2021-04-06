@@ -24,7 +24,6 @@ const newFormHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-
     if (response.ok) {
       document.location.replace('/profile');
     } else {
@@ -73,7 +72,7 @@ const delButtonHandler = async (event) => {
 
 
 document
-  .querySelector('.new-pet-form')
+  .querySelector('#new-pet-form')
   .addEventListener('submit', newFormHandler);
 
 document

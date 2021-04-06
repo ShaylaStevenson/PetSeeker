@@ -88,7 +88,7 @@ router.get('/:id', (req, res) => {
   });
 });
 //need to add in withAuth below, and user ID req.session, and if req.session
-router.post('/', async (req, res) => {
+router.post('/profile', async (req, res) => {
   if (req) {
     Pet.create({
       name: req.body.name,
