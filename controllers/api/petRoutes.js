@@ -106,11 +106,13 @@ router.post('/', async (req, res) => {
       adoptable_now: req.body.adoptable_now,
       date_posted: req.body.date_posted,
       contact_email: req.body.contact_email,
-      user_id: req.body.user_id
+      //user_id: req.body.user_id
+      user_id: req.session.user_id
     })
     .then(animalData => res.json(animalData))
     .catch(err => {
       res.status(400).json(err);
+      console.error(err);
     });
   }
 });
