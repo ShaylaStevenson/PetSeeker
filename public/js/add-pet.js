@@ -1,8 +1,6 @@
-// get a reference to your required module
-var server = require('../../server');
-
-// name is a member of myModule due to the export above
-var cloudinary = server.cloudinary;
+   // to store the url and public_id from the image object
+   let imageUrl;
+   let imageId;
 
 const newFormHandler = async (event) => {
     event.preventDefault();
@@ -22,14 +20,13 @@ const newFormHandler = async (event) => {
     const adoptable_now = document.querySelector('#good_with_dogs:checked') ? true : false;
     const contact_email = document.querySelector('#contact_email').value.trim();
     console.log(name, gender, special_needs);
-    
-    
-  
+
     if (name) {
       const response = await fetch(`/api/pets`, {
         method: 'POST',
         body: JSON.stringify({
-          name, animal_type, breed, description, age, gender, size, good_with_kids, good_with_dogs, good_with_cats, zodiac, special_needs, adoptable_now, contact_email
+          name, animal_type, breed, description, age, gender, size, good_with_kids, good_with_dogs, good_with_cats, zodiac, special_needs, adoptable_now, contact_email,
+          imageId, imageUrl
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -40,38 +37,12 @@ const newFormHandler = async (event) => {
         document.location.replace('/profile');
       } else {
         alert(response.statusText);
-        console.error(err);
+        console.log(err);
       }
     };
 };
 
 // code related to images work in progress
-
-/////////////////original////////////////
-// var myWidget = cloudinary.createUploadWidget({
-//   cloudName: 'petseekerpalooza', 
-//   uploadPreset: 'dmyaf3jw'}, (error, result) => { 
-//     if (!error && result && result.event === "success") { 
-//       console.log('Done! Here is the image info: ', result.info); 
-//       const imageData = result.info;
-//       const imageUrl = imageData.url;
-//       const imageId = imageData.public_id;
-//       console.log(imageData);
-//       console.log(imageUrl);
-//       console.log(imageId);
-//     }
-//   }
-// )
-// document.getElementById("upload_widget").addEventListener("click", function(){
-//   myWidget.open();
-// }, false);
-//////////////////////////////////////////////////
-
-// to store the url and public_id from the image object
-var imageUrl = '';
-var imageId = ''; 
-
-//////////////////////////////////
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'petseekerpalooza', 
   uploadPreset: 'dmyaf3jw'}, (error, result) => { 
@@ -79,21 +50,18 @@ var myWidget = cloudinary.createUploadWidget({
       console.log('Done! Here is the image info: ', result.info); 
       //store the image data
       const imageData = result.info;
-      console.log(imageData);
 
       imageUrl = imageData.url;
       imageId = imageData.public_id;
-      
-      
-    }return imageUrl, imageId
-  }
-)
-console.log('test==============')
-console.log(imageUrl);
-console.log(imageId);
 
-////////////////////////////////////
+      console.log('test=============')
+      console.log(imageUrl);
+      console.log(imageId);
+      
+    }
+});
 
+// link to the widget 
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);

@@ -91,11 +91,15 @@ Pet.init(
         key: 'id',
       },
     },
-  
-    // image_url: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true, 
-    // }
+  // image fields
+    imageUrl: {
+      type: DataTypes.STRING,
+      allowNull: true, 
+    },
+    imageId: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    }
   },
   {
     sequelize,
