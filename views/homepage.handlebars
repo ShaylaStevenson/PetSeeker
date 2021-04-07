@@ -33,25 +33,25 @@
   
       <a href="/pet/{{pet.id}}">{{pet.name}}</a>
     </h2>
-    {{#if pet.adoptable_now}}
-    <p>&#9989; Adoptable Now!</p>
-    {{/if}}
     {{#if pet.good_with_cats}}
     <p>&#9989; Good with cats!</p>
     {{/if}}
     {{#if pet.good_with_dogs}}
     <p>&#9989; Good with dogs!</p>
     {{/if}}
-    {{#if pet.special_needs}}
-    <p>&#9989; Special Needs</p>
+    {{#if pet.good_with_kids}}
+    <p>&#9989; Good with kids!</p>
+    {{/if}}
+    {{#if pet.adoptable_now}}
+    <p>&#9989; Adoptable now!</p>
     {{/if}}
   </div>
-  <div class="col-md-7">
+  <div class="col-md-7"> 
     <p>
-      This {{pet.animal_type}} is a {{pet.breed}} Created by {{pet.user.name}} on {{format_date pet.date_posted}}
+      This {{pet.animal_type}} is a {{pet.breed}} created by {{pet.user.name}} on {{format_date pet.date_posted}}
     </p>
     <p>
-      Description: {{pet.description}}
+      {{pet.description}}
     </p>
   </div>
   
