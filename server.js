@@ -6,7 +6,7 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
 // dependencies related to image
-const cloudinary = require('cloudinary').v2;
+//const cloudinary = require('cloudinary').v2;
 
 
 const sequelize = require('./config/connection');
@@ -47,4 +47,3 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
 
-//exports.cloudinary = cloudinary;
