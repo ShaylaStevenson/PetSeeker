@@ -30,26 +30,30 @@
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <!--{{{get_emoji}}}-->
+  
       <a href="/pet/{{pet.id}}">{{pet.name}}</a>
     </h2>
-    <p>
-      <!--<span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <!--<span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      <!--needed!-->
-    </p>
-    <p>Created by {{pet.user.name}} on {{format_date pet.date_posted}}</p>
+    {{#if pet.adoptable_now}}
+    <p>&#9989; Adoptable Now!</p>
+    {{/if}}
+    {{#if pet.good_with_cats}}
+    <p>&#9989; Good with cats!</p>
+    {{/if}}
+    {{#if pet.good_with_dogs}}
+    <p>&#9989; Good with dogs!</p>
+    {{/if}}
+    {{#if pet.special_needs}}
+    <p>&#9989; Special Needs</p>
+    {{/if}}
   </div>
   <div class="col-md-7">
     <p>
-      {{pet.description}}
-      
+      This {{pet.animal_type}} is a {{pet.breed}} Created by {{pet.user.name}} on {{format_date pet.date_posted}}
+    </p>
+    <p>
+      Description: {{pet.description}}
     </p>
   </div>
   
 </div>
 {{/each}}
-
-<script src="/js/add-pet.js"></script>
