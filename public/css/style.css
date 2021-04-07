@@ -1,25 +1,29 @@
 header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(27, 8, 8);
 }
+
+body {
+  background-image: linear-gradient(180deg, #DCDCDC, #E0FFFF);
+  background-repeat: no-repeat;
+  height: 100vh;
+  }
+
+
+
+.navbar {
+  background-image: linear-gradient(to right, #FFC0CB , #87CEFA);
+  
+  
+  border: 2px solid grey;
+}
+
 
 .form-label {
   color:darkcyan;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
-}
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
+
 
 .dollar-amount {
   color: #056605;
@@ -38,4 +42,82 @@ header, .project:not(:last-child) {
 
 .comment:nth-child(odd) {
   background-color: #fff5eb;
+}
+
+a {
+  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
+  border: none;
+  color: black;
+  border: 1px solid	#FFE4E1;
+  border-radius: 18px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: bold;
+}
+
+.btn {
+  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
+  border: none;
+  color: black;
+  border: 1px solid	#FFE4E1;
+  border-radius: 18px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: bold;
+  
+}
+
+.no-button {
+  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
+  border: none;
+  color: black;
+  border: 1px solid	#FFE4E1;
+  border-radius: 18px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: bold;
+}
+
+.navbar-brand {
+  background-image: linear-gradient(to right, #AFD275 , #B0E0E6);/* Green */
+  border: none;
+  color: black;
+  border: 1px solid	#FFE4E1;
+  border-radius: 18px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: bold;
+}
+
+.form-check-label {
+  color:black; 
+}
+
+.dropdown-menu {
+  background-color:#FFC0CB;
+}
+
+.container1 {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding: 15px 32px;
+  height:80px;   
+  background-image: linear-gradient(to right, #FFC0CB , #87CEFA);
+  color: black;
+  border: 1px solid	#000000;
+  text-align: center;
+  
+}
+
+.btn1-floating {
+  background-color: none;
 }
