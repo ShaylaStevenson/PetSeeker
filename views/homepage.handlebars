@@ -33,18 +33,25 @@
       <!--{{{get_emoji}}}-->
       <a href="/pet/{{pet.id}}">{{pet.name}}</a>
     </h2>
-    <p>
-      <!--<span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <!--<span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      <!--needed!-->
-    </p>
-    <p>Created by {{pet.user.name}} on {{format_date pet.date_posted}}</p>
+    {{#if pet.good_with_cats}}
+    <p>&#9989; Good with cats!</p>
+    {{/if}}
+    {{#if pet.good_with_dogs}}
+    <p>&#9989; Good with dogs!</p>
+    {{/if}}
+    {{#if pet.good_with_kids}}
+    <p>&#9989; Good with kids!</p>
+    {{/if}}
+    {{#if pet.adoptable_now}}
+    <p>&#9989; Adoptable Now!</p>
+    {{/if}}
   </div>
-  <div class="col-md-7">
+  <div class="col-md-7"> 
+    <p>
+      This {{pet.animat_type}} is a {{pet.breed}} created by {{pet.user.name}} on {{format_date pet.date_posted}}
+    </p>
     <p>
       {{pet.description}}
-      
     </p>
   </div>
   
