@@ -1,9 +1,23 @@
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
+#form-title {
+  background-color: #7e685a;
+  color: #afd275;
+}
+
+#new-pet-form {
+  background-color: #c2b9b0;
+}
 
 .form-label {
-  color:darkcyan;
+  color: #d14c59;
+}
+
+#new-pet-form .btn {
+  background-color: #afd275;
+  width: 100%;
+  border: white;
 }
 
 .no-button {
