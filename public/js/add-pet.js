@@ -18,22 +18,25 @@ const newFormHandler = async (event) => {
     console.log(name, gender, special_needs);
   
     // add if statement
-    const response = await fetch(`/api/pets`, {
-      method: 'POST',
-      body: JSON.stringify({
-        name, animal_type, breed, description, age, gender, size, good_with_kids, good_with_dogs, good_with_cats, zodiac, special_needs, adoptable_now, contact_email
-      }),
-      headers: {
-        'Content-Type': 'application/json'
+    if (name) {
+      const response = await fetch(`/api/pets`, {
+        method: 'POST',
+        body: JSON.stringify({
+          name, animal_type, breed, description, age, gender, size, good_with_kids, good_with_dogs, good_with_cats, zodiac, special_needs, adoptable_now, contact_email
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+    
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        alert(response.statusText);
+        console.error(err);
       }
-    });
-  
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert(response.statusText);
-      console.error(err);
-    }
+    };
+    
   };
   
 document.querySelector('#new-pet-form').addEventListener('submit', newFormHandler);

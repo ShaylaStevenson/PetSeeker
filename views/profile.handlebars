@@ -10,14 +10,28 @@
     <h2 class="bg-info" style="text-align: center;">Your Pets</h2>
     <button type="submit" class="btn m-3" style="width:100%"><a class="link" href="/profile/new">Add New Pet</a></button>
 
-    {{#if pets.length}}
-      <section>
-          {{#each pets as |pet|}}
-            <!--need pet details here-->
-          {{/each}}
-      </section>
-    {{/if}}
-  </div>
+    {{#each pets as |pet| }}
+    <div class="row mb-4 project">
+      <div class="col-md-5">
+        <h2>
+          <a href="/pet/{{pet.id}}">{{pet.name}}</a>
+        </h2>
+        {{pet.description}}
+        <p>Created by you on {{format_date pet.date_posted}}</p>
+      
+      </div>
+    </div>
+    <div class="col-md-7">
+      <p>
+      
+      
+      </p>
+    </div>
+  
+  
+
+  {{/each}}
+  
 
   <div class="col-md bg-secondary">
     <h2 class="bg-info" style="text-align: center;">Favorites</h2>
