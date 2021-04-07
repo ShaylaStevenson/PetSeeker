@@ -1,3 +1,9 @@
+// get a reference to your required module
+var server = require('../../server');
+
+// name is a member of myModule due to the export above
+var cloudinary = server.cloudinary;
+
 const newFormHandler = async (event) => {
     event.preventDefault();
   
@@ -16,8 +22,9 @@ const newFormHandler = async (event) => {
     const adoptable_now = document.querySelector('#good_with_dogs:checked') ? true : false;
     const contact_email = document.querySelector('#contact_email').value.trim();
     console.log(name, gender, special_needs);
+    
+    
   
-    // add if statement
     if (name) {
       const response = await fetch(`/api/pets`, {
         method: 'POST',
@@ -36,7 +43,62 @@ const newFormHandler = async (event) => {
         console.error(err);
       }
     };
-    
-  };
+};
+
+// code related to images work in progress
+
+/////////////////original////////////////
+// var myWidget = cloudinary.createUploadWidget({
+//   cloudName: 'petseekerpalooza', 
+//   uploadPreset: 'dmyaf3jw'}, (error, result) => { 
+//     if (!error && result && result.event === "success") { 
+//       console.log('Done! Here is the image info: ', result.info); 
+//       const imageData = result.info;
+//       const imageUrl = imageData.url;
+//       const imageId = imageData.public_id;
+//       console.log(imageData);
+//       console.log(imageUrl);
+//       console.log(imageId);
+//     }
+//   }
+// )
+// document.getElementById("upload_widget").addEventListener("click", function(){
+//   myWidget.open();
+// }, false);
+//////////////////////////////////////////////////
+
+// to store the url and public_id from the image object
+var imageUrl = '';
+var imageId = ''; 
+
+//////////////////////////////////
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'petseekerpalooza', 
+  uploadPreset: 'dmyaf3jw'}, (error, result) => { 
+    if (!error && result && result.event === "success") { 
+      console.log('Done! Here is the image info: ', result.info); 
+      //store the image data
+      const imageData = result.info;
+      console.log(imageData);
+
+      imageUrl = imageData.url;
+      imageId = imageData.public_id;
+      
+      
+    }return imageUrl, imageId
+  }
+)
+console.log('test==============')
+console.log(imageUrl);
+console.log(imageId);
+
+////////////////////////////////////
+
+document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);
+
+//cloudinary.url("help_dtbigg.png", {width: 90, height: 90, crop: "thumb"});
+//http://res.cloudinary.com/demo/image/upload/w_150,h_100,c_fill,r_20/sample.png
   
 document.querySelector('#new-pet-form').addEventListener('submit', newFormHandler);
