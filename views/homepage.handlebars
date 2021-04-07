@@ -30,8 +30,7 @@
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <!--{{{get_emoji}}}-->
+  
       <a href="/pet/{{pet.id}}">{{pet.name}}</a>
     </h2>
     {{#if pet.good_with_cats}}
@@ -58,5 +57,3 @@
   
 </div>
 {{/each}}
-
-<script src="/js/add-pet.js"></script>
