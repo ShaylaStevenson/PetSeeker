@@ -1,6 +1,6 @@
-   // to store the url and public_id from the image object
-   let imageUrl;
-   let imageId;
+// to store the url and public_id from the image object
+let imageUrl;
+let imageId;
 
 const newFormHandler = async (event) => {
     event.preventDefault();
@@ -62,9 +62,10 @@ var myWidget = cloudinary.createUploadWidget({
 });
 
 // link to the widget 
-document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-  }, false);
+document.getElementById("upload_widget").addEventListener("click", function(event){
+  event.preventDefault()
+  myWidget.open();
+}, false);
 
 //cloudinary.url("help_dtbigg.png", {width: 90, height: 90, crop: "thumb"});
 //http://res.cloudinary.com/demo/image/upload/w_150,h_100,c_fill,r_20/sample.png
