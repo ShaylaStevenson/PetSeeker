@@ -119,18 +119,28 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md">
+            <div class="col-md-6">
                 <label for="description" class="form-label">Description</label><br>
-                <textarea type="text" id="description" name="description" rows="5" class="form-input"></textarea>
-                    
+                <textarea type="text" id="description" name="description" rows="5" style="width: 400px" class="form-input"></textarea>
+            </div>
+            <div class="col-md-6">      
                 <label for="contact_email" class="form-label">Contact email</label><br>
-                <input type="text" id="contact_email" name="contact_email" class="form-input" />   
+                <input type="text" id="contact_email" name="contact_email" class="form-input" style="width: 300px" /><br>
+
+                <button id="upload_widget" class="cloudinary-button mt-5" style="width: 300px">Upload Photo</button>
             </div>
         </div>
     </form>
+
+    <button type="submit" form="new-pet-form" class="btn">Create</button>
+ 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
-<button id="upload_widget" class="cloudinary-button">Upload Photo</button>
-<button type="submit" form="new-pet-form" class="btn">Create</button>
+
 
 
 
