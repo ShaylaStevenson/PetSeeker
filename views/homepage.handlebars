@@ -1,55 +1,29 @@
-<nav class="navbar navbar-fluid navbar-expand-lg">
-  {{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> --}}
-  <div class="row collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav flex-item">
-
-      <li class="nav-item col-3">
-        <a class="nav-link" href="#">Cats</a>
-      </li>
-
-      <li class="nav-item col-3">
-        <a class="nav-link" href="#">Dogs</a>
-      </li>
-
-      <li class="nav-item col-3">
-        <a class="nav-link" href="#">Other</a>
-      </li>
-
-      <!--=======need to add with auth==========-->
-      <li class="nav-item col-3">
-        <a href="/profile/new">Add Pet</a>
-      </li>
-    </ul>
+<!--template card for homepage-->
+<div class="card-deck">
+  <!-- Loop over each object in the projects array -->
+  {{#each pets as |pet| }}
+  <div class="card project card">
+    <img src="{{pet.imageUrl}}" alt="No picture added" class="card-img-top img-fluid"/>
+     {{!-- max-width="250" height="400" --}}
+    <div class="card-body">
+      <h5 class="card-title"><a href="/pet/{{pet.id}}">{{pet.name}}</a></h5>
+      <p class="card-text">{{pet.description}}</p>
+      {{#if pet.good_with_cats}}
+      <p class="card-text">&#9989; Good with cats!</p>
+      {{/if}}
+      {{#if pet.good_with_dogs}}
+      <p class="card-text">&#9989; Good with dogs!</p>
+      {{/if}}
+      {{#if pet.good_with_kids}}
+      <p class="card-text">&#9989; Good with kids!</p>
+      {{/if}}
+      {{#if pet.adoptable_now}}
+      <p class="card-text">&#9989; Adoptable now!</p>
+      {{/if}}
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">This {{pet.animal_type}} is a {{pet.breed}} added by {{pet.user.name}} on {{format_date pet.date_posted}}</small>
+    </div>
   </div>
-</nav>
-
-<!-- Loop over each object in the projects array -->
-{{#each pets as |pet| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <!--{{{get_emoji}}}-->
-      <a href="/pet/{{pet.id}}">{{pet.name}}</a>
-    </h2>
-    <p>
-      <!--<span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <!--<span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      <!--needed!-->
-    </p>
-    <p>Created by {{pet.user.name}} on {{format_date pet.date_posted}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{pet.description}}
-      
-    </p>
-  </div>
-  
+  {{/each}}
 </div>
-{{/each}}
-
-<script src="/js/add-pet.js"></script>

@@ -19,7 +19,9 @@ router.get('/', (req, res) => {
           'special_needs',
           'adoptable_now',
           'contact_email',
-          'user_id'
+          'user_id',
+          'imageId',
+          'imageUrl',
       ],
       include: [
         {
@@ -64,7 +66,9 @@ router.get('/:id', (req, res) => {
           'special_needs',
           'adoptable_now',
           'contact_email',
-          'user_id'
+          'user_id',
+          'imageId',
+          'imageUrl',
       ],
       include: [
         {
@@ -87,8 +91,8 @@ router.get('/:id', (req, res) => {
       res.status(400).json(err);
   });
 });
-//need to add in withAuth below, and user ID req.session, and if req.session
-router.post('/profile', async (req, res) => {
+//need to add in withAuth below
+router.post('/', async (req, res) => {
   if (req) {
     Pet.create({
       name: req.body.name,
@@ -106,8 +110,10 @@ router.post('/profile', async (req, res) => {
       adoptable_now: req.body.adoptable_now,
       date_posted: req.body.date_posted,
       contact_email: req.body.contact_email,
-      //user_id: req.body.user_id
-      user_id: req.session.user_id
+      user_id: req.session.user_id,
+      //image fields
+      imageUrl: req.body.imageUrl,
+      imageId: req.body.imageId,
     })
     .then(animalData => res.json(animalData))
     .catch(err => {
