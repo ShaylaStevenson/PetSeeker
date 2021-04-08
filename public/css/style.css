@@ -119,12 +119,6 @@ a {
   text-align: right;
 }
 
-.deletebtn {
-  height: 35px;
-  color:black;
-  background-color: red;
-}
-
 /* new pet form styling */
 .form-check-label {
   color:black; 
