@@ -1,29 +1,4 @@
-<nav class="navbar navbar-fluid navbar-expand-lg navbar-light bg-light">
-  {{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> --}}
-  <div class="row collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav flex-item">
 
-      <li class="nav-item col-3">
-        <a class="nav-link" href="#">Cats</a>
-      </li>
-
-      <li class="nav-item col-3">
-        <a class="nav-link" href="#">Dogs</a>
-      </li>
-
-      <li class="nav-item col-3">
-        <a class="nav-link" href="#">Other</a>
-      </li>
-
-      <!--=======need to add with auth==========-->
-      <li class="nav-item col-3">
-        <a href="/profile/new">Add Pet</a>
-      </li>
-    </ul>
-  </div>
-</nav>
 
 <!-- Loop over each object in the projects array -->
 {{#each pets as |pet| }}
