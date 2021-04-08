@@ -28,6 +28,8 @@ Future developmet plans include adding a search funciton to allow users to perus
 ![Picture](./img/2.png) 
 
 ### Instalation:
+* In the console run - node seeds/seed.js
+* In the console run - Noder server.js
 
 ### Project Requirements:
 
