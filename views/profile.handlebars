@@ -1,30 +1,30 @@
-<div class="row">
-  <div class="col-auto" id="profile-head">
-    <h1>Welcome, {{name}}!</h1>
-  </div>
-</div>
-
-
-<div class="row m-3">
-  <div class="col-md bg-secondary">
-    <h2 class="bg-info" style="text-align: center;">Your Pets</h2>
-    <button type="submit" class="btn m-3" style="width:97%"><a class="link" href="/profile/new">Add New Pet</a></button>
-    
-   {{#each pets as |pet| }}
-    <div class="row mb-4 project">
-      <div class="col-md-5">
-        <h2>
-          <a href="/pet/{{pet.id}}">{{pet.name}}</a>
-        </h2>
-        <h4>About Me: {{pet.description}}</h4>
-        <img src="{{pet.imageUrl}}" alt="No picture added" width="200" height="200" class="rounded p-2"/>
-        <p>Created by you on {{format_date pet.date_posted}}</p>
-      </div>  
-      <div class="col-7 deletediv">
-        <button class="deletebtn" data-id='{{id}}'>Delete</button>
-      </div>    
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <!--template card for profile page-->
+      <div class="card-deck">
+          <!-- Loop over each object in the projects array -->
+          {{#each pets as |pet| }}
+          <div class="card project">
+            <img src="{{pet.imageUrl}}" alt="No picture added" max-width="250" height="400" class="card-img-top"/>
+            <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+              <h2 class="card-title"><strong>{{pet.name}}</strong></h2>
+              <p class="card-text">Created by you on {{format_date pet.date_posted}}</p>
+              <div class="link d-flex justify-content-space-around mt-4">
+                <a id="delete-link-profile" href="#" class="card-link text-warning" data-id="{{id}}">Delete Post</a>
+                <a id="view-link-profile" href="/pet/{{pet.id}}" class="card-link text-info">View Details</a>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+      </div>
     </div>
-   {{/each}}
+    <div class="col-3">
+      <div id="profile-head">
+        <h1>Welcome, {{name}}!</h1>
+      </div>
+      <button type="submit" class="btn m-3" style="width:97%"><a class="link" href="/profile/new">Add New Pet</a></button>
+    </div>
   </div>
 </div>
 
