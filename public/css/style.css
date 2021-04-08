@@ -2,6 +2,7 @@ header, .project:not(:last-child) {
   border-bottom: 1px solid rgb(27, 8, 8);
 }
 
+/**code to reset styling**/
 #nametag {
   animation : none;
   animation-delay : 0;
@@ -174,9 +175,9 @@ header, .project:not(:last-child) {
 
 body {
   background-image: linear-gradient(180deg, #DCDCDC, #E0FFFF);
-  background-repeat: no-repeat;
-  height: 100vh;
-  }
+  background-repeat: repeat;
+  height: 150vh;
+}
 
 
 
@@ -191,9 +192,6 @@ body {
 .form-label {
   color:darkcyan;
 }
-
-
-
 
 .dollar-amount {
   color: #056605;
