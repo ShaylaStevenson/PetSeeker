@@ -127,6 +127,18 @@ a {
   color:black; 
 }
 
+/* login styling */
+#login-card {
+  background-image: linear-gradient(to right, #87CEFA, #FFC0CB);
+}
+
+.login-header {
+  background-color: #AFD275;
+}
+
+
+
+
 /* .form-label {
   color:darkcyan;
 } */
