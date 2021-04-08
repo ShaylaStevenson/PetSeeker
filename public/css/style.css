@@ -3,6 +3,7 @@ body {
   background-image: linear-gradient(180deg, #DCDCDC, #E0FFFF);
   background-repeat: repeat;
   height: 150vh;
+  font-family: 'Poppins', sans-serif;
 }
 
 .navbar {
@@ -13,14 +14,16 @@ body {
 .navbar-brand {
   background-image: linear-gradient(to right, #AFD275 , #B0E0E6);/* Green */
   border: none;
-  color: black;
+  color: rgb(10, 94, 133) !important;
   border: 1px solid	#FFE4E1;
   border-radius: 18px;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
+  text-decoration:none;
   display: inline-block;
   font-size: bold;
+  font-family: 'Josefin Sans', sans-serif !important;
+  text-shadow: 2px 2px #aee2c8 !important;
 }
 
 .container1 {
@@ -126,6 +129,32 @@ a {
 .form-check-label {
   color:black; 
 }
+
+#form-title {
+  background-image: linear-gradient(to right, #87CEFA, #FFC0CB);
+  color: gray;
+}
+
+#new-pet-form {
+  background-image: linear-gradient(to right , #c0e3e7, #c8dbaa);
+}
+
+#new-pet-form .form-label {
+  color: #2182a8;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#new-pet-form .radio {
+  margin-left: 10px;
+}
+
+#upload_widget {
+  background-color: rgb(16, 121, 139);
+  color: white;
+  font-size: larger;
+}
+
 
 /* login styling */
 #login-card {
