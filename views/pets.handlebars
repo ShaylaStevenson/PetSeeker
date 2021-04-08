@@ -25,10 +25,14 @@
       {{#if adoptable_now}}
       <li>Adoptable now!</li>
       {{/if}}
+      {{#if contact_email}}
+      <a target="_blank" href="mailto:{{contact_email}}">Get in touch at {{contact_email}}</a>
+      {{/if}}
     </ul>
     <p>
       {{description}}
     </p>
+    <img src="{{pet.imageUrl}}" alt="No picture added" width="200" height="200" class="rounded p-2"/>
   </div>
 </div> 
 
