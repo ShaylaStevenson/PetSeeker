@@ -1,42 +1,49 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
-
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
-
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
+<div class="container">
+  <h3 class="text-secondary">In order to create a profile or add a pet, you must first login.<br>
+    Need to signup instead? We got you covered.</h3><br>
+  <div class="card" id="login-card">
+      <div class="row">
+    <!--login form-->
+        <div class="col-md-6">
+          <h2 class="card-header login-header">Login</h2>
+          <form class="ml-4 form login-form">
+            
+            <div class="form-group">
+              <label class="form-label" for="email-login">email:</label><br>
+              <input class="form-input" type="text" id="email-login" />
+            </div>
+            <div class="form-group">
+              <label class="form-label"for="password-login">password:</label><br>
+              <input class="form-input" type="password" id="password-login" />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">login</button>
+            </div>
+          </form>
+        </div>
+        <!--signup form-->
+        <div class="col-md-6">
+          <h2 class="card-header login-header">Signup</h2>
+          <form class="ml-4 form signup-form">
+            
+            <div class="form-group">
+              <label class="form-label" for="name-signup">name:</label><br>
+              <input class="form-input" type="text" id="name-signup" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email-signup">email:</label><br>
+              <input class="form-input" type="text" id="email-signup" />              </div>
+            <div class="form-group">
+              <label class="form-label" for="password-signup">password:</label><br>
+              <input class="form-input" type="password" id="password-signup" />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">signup</button>
+            </div>
+          </form>
+        </div>
+    </div>
   </div>
 </div>
-
+      
 <script src="./js/login.js"></script>
