@@ -1,9 +1,4 @@
-# PetSeekerPalooza
-
-This is an interactive app for users to post, look at, and chose to adopt pets. Pet Seeker Palooza allows users to add a pet with a description and defining characteristics of their pets, and if that pet is available for adoption. If the user wants to adopt a posted pet, they can email the user to kick off the adoption process :)
-
-Pet Seeker Palooza is deployed on Heroku for users to create a profile, post pets, and leave comments on pets they like. 
-
+# PetSeekerPalooza_db
 
 ## Table of Contents
 
