@@ -1,6 +1,6 @@
-   // to store the url and public_id from the image object
-   let imageUrl;
-   let imageId;
+// to store the url and public_id from the image object
+let imageUrl;
+let imageId;
 
 const newFormHandler = async (event) => {
     event.preventDefault();

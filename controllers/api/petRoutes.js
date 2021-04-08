@@ -66,7 +66,9 @@ router.get('/:id', (req, res) => {
           'special_needs',
           'adoptable_now',
           'contact_email',
-          'user_id'
+          'user_id',
+          'imageId',
+          'imageUrl',
       ],
       include: [
         {
