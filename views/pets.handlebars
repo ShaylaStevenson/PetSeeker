@@ -1,38 +1,41 @@
 <div class="col-md-6">
   <div>
-    <span class='title'>Name: {{name}}</span>
+    <h2>Name: {{name}}</h2>
   </div>
-  <div class="card">
-    <ul>
-      <li>Species: {{animal_type}}</li>
-      <li>Breed: {{breed}}</li>
-      <li>Age: {{age}}</li>
-      <li>Gender: {{gender}}</li>
-      <li>Size: {{size}}</li>
-      <li>Zodiac: {{zodiac}}</li>
-      {{#if good_with_cats}}
-      <li>Good with cats</li>
-      {{/if}}
-      {{#if good_with_dogs}}
-      <li>Good with dogs</li>
-      {{/if}}
-      {{#if good_with_kids}}
-      <li>Good with kids</li>
-      {{/if}}
-      {{#if special_needs}}
-      <li style="color: blue;">Special needs</li>
-      {{/if}}
-      {{#if adoptable_now}}
-      <li>Adoptable now!</li>
-      {{/if}}
-      {{#if contact_email}}
-      <a target="_blank" href="mailto:{{contact_email}}">Get in touch at {{contact_email}}</a>
-      {{/if}}
-    </ul>
-    <p>
-      {{description}}
-    </p>
-    <img src="{{pet.imageUrl}}" alt="No picture added" width="200" height="200" class="rounded p-2"/>
+  <div class="container">
+    <div class="row mb-4 project">
+      <ul>
+        <li>Species: {{animal_type}}</li>
+        <li>Breed: {{breed}}</li>
+        <li>Age: {{age}}</li>
+        <li>Gender: {{gender}}</li>
+        <li>Size: {{size}}</li>
+        <li>Zodiac: {{zodiac}}</li>
+        {{#if good_with_cats}}
+        <li>Good with cats</li>
+        {{/if}}
+        {{#if good_with_dogs}}
+        <li>Good with dogs</li>
+        {{/if}}
+        {{#if good_with_kids}}
+        <li>Good with kids</li>
+        {{/if}}
+        {{#if special_needs}}
+        <li style="color: blue;">Special needs</li>
+        {{/if}}
+        {{#if adoptable_now}}
+        <li>Adoptable now!</li>
+        {{/if}}
+        {{#if contact_email}}
+        <a target="_blank" href="mailto:{{contact_email}}">Get in touch at {{contact_email}}</a>
+        {{/if}}
+      </ul>
+      <p>
+        {{description}}
+      </p>
+      <img src="{{imageUrl}}" alt="No picture added" width="200" height="200" class="rounded p-2"/>
+    </div>
+
   </div>
 </div> 
 
@@ -43,10 +46,11 @@
       <textarea name="comment-text" id='comment-text'></textarea>
   </div>
   <div>
-      <button type="submit" class='create-btn'>Add Comment</button>
+      <button type="submit" class='btn'>Add Comment</button>
   </div>
     
 </form>
+<br>
 
 {{> comments Comments}} 
   
