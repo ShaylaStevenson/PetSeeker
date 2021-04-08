@@ -1,59 +1,75 @@
-<div class="col-md-6">
-  <div>
-    <h2>Name: {{name}}</h2>
-  </div>
-  <div class="container">
-    <div class="row mb-4 project">
-      <ul>
-        <li>Species: {{animal_type}}</li>
-        <li>Breed: {{breed}}</li>
-        <li>Age: {{age}}</li>
-        <li>Gender: {{gender}}</li>
-        <li>Size: {{size}}</li>
-        <li>Zodiac: {{zodiac}}</li>
-        {{#if good_with_cats}}
-        <li>Good with cats</li>
-        {{/if}}
-        {{#if good_with_dogs}}
-        <li>Good with dogs</li>
-        {{/if}}
-        {{#if good_with_kids}}
-        <li>Good with kids</li>
-        {{/if}}
-        {{#if special_needs}}
-        <li style="color: blue;">Special needs</li>
-        {{/if}}
-        {{#if adoptable_now}}
-        <li>Adoptable now!</li>
-        {{/if}}
-        {{#if contact_email}}
-        <a target="_blank" href="mailto:{{contact_email}}">Get in touch at {{contact_email}}</a>
-        {{/if}}
-      </ul>
-      <p>
-        {{description}}
-      </p>
-      <img src="{{imageUrl}}" alt="No picture added" width="200" height="200" class="rounded p-2"/>
+<!--comment form template-->
+<div class="container">
+  <form id="comment-form" class="bg-secondary">
+    <div class="row">
+      <div class="col-8">
+        <textarea name="comment-text" id='comment-text' class="m-3" style="width:100%" rows="3" placeholder="Leave a comment for {{name}}!"></textarea>
+      </div>
+      <div class="col-4">
+        <button type="submit" class='btn mt-4' style="width:95%">Add Comment</button>
+      </div>
     </div>
+    <div class="p-2 mx-3">
+      <strong>{{> comments Comments}}</strong>
+    </div>
+  </form>
+  <br>
+</div>
 
-  </div>
-</div> 
+<!--main card template-->  
+<div class="container">
+  <div class="card project">
+    <h5 id="detail-head" class="card-header">More about {{name}}!</h5>
+    <div class="card-body bg-light">
+      <div class="row">
 
-<form id="comment-form">
-    
-  <div>
-      <label form="comment-text">Add a New Comment:</label>
-      <textarea name="comment-text" id='comment-text'></textarea>
-  </div>
-  <div>
-      <button type="submit" class='btn'>Add Comment</button>
-  </div>
-    
-</form>
-<br>
+        <div class="col-6">
+          <div class="row">
 
-{{> comments Comments}} 
+            <div class="m-4">
+              <p class="card-text"><strong>{{description}}</strong></p>
+            </div>
+
+            <!--column 1-->
+            <div class="col-6 my-4 pl-5">
+              <p class="card-text"><strong>Breed:</strong> {{breed}}</p>
+              <p class="card-text"><strong>Age:</strong> {{age}}</p>
+              <p class="card-text"><strong>Gender:</strong> {{gender}}</p>
+              <p class="card-text"><strong>Size:</strong> {{size}}</p>
+              <p class="card-text"><strong>Zodiac:</strong> {{zodiac}}</p>
+            </div>
+            
+            <!--column 2-->
+            <div class="col-6 my-4">
+              {{#if good_with_cats}}
+              <p class="card-text text-success"><strong>Good with cats</strong></p>
+              {{/if}}
+              {{#if good_with_dogs}}
+              <p class="card-text text-success"><strong>Good with dogs</strong></p>
+              {{/if}}
+              {{#if good_with_kids}}
+              <p class="card-text text-success"><strong>Good with kids</strong></p>
+              {{/if}}
+              {{#if special_needs}}
+              <p class="card-text" style="color: blue;"><strong>Special needs</strong></p>
+              {{/if}}
+              {{#if adoptable_now}}
+              <p class="card-text text-success"><strong>Adoptable now!</strong></p>
+              {{/if}}
+            </div>
+          </div>
+          <div class="mt-5 ml-5">
+            <a target="_blank" href="mailto:{{contact_email}}">Get in touch at {{contact_email}}</a>
+          </div>
+        </div>
+        <!--image-->
+        <div class="col-6">
+          <img src="{{imageUrl}}" alt="No picture added" width="350" height="500" align="right" class="card-img-end"/>
+        </div>
+
+      </div> 
+    </div>
+  </div>
+</div>
   
- <script src="/js/comment.js"></script>
-
-
+<script src="/js/comment.js"></script>

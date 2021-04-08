@@ -1,6 +1,131 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid rgb(27, 8, 8);
+/* main styling */
+body {
+  background-image: linear-gradient(180deg, #DCDCDC, #E0FFFF);
+  background-repeat: repeat;
+  height: 150vh;
 }
+
+.navbar {
+  background-image: linear-gradient(to right, #FFC0CB , #87CEFA);
+  border: 2px solid grey;
+}
+
+.navbar-brand {
+  background-image: linear-gradient(to right, #AFD275 , #B0E0E6);/* Green */
+  border: none;
+  color: black;
+  border: 1px solid	#FFE4E1;
+  border-radius: 18px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: bold;
+}
+
+.container1 {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding: 15px 32px;
+  height:80px;   
+  background-image: linear-gradient(to right, #FFC0CB , #87CEFA);
+  color: black;
+  border: 1px solid	#000000;
+  text-align: center;
+}
+
+/* button and attribute styling */
+a {
+  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
+  border: none;
+  color: black;
+  border: 1px solid	#FFE4E1;
+  border-radius: 18px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: bold;
+}
+
+.btn {
+  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
+  border: none;
+  color: black;
+  border: 1px solid	#FFE4E1;
+  border-radius: 18px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: bold;
+}
+
+.no-button {
+  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
+  border: none;
+  color: black;
+  border: 1px solid	#FFE4E1;
+  border-radius: 18px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: bold;
+}
+
+.btn1-floating {
+  background-color: none;
+}
+
+/* comment styling */
+.comment-form {
+  margin-bottom: 5%;
+}
+
+.comment {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.comment:nth-child(odd) {
+  background-color: #fdc7d0;
+}
+
+/* pet by id styling */
+#detail-head {
+  background-color:#AFD275 ;
+}
+
+/* profile page styling */
+#profile-head {
+  text-align: center;
+}
+
+.deletediv{
+  text-align: right;
+}
+
+.deletebtn {
+  height: 35px;
+  color:black;
+  background-color: red;
+}
+
+/* new pet form styling */
+.form-check-label {
+  color:black; 
+}
+
+/* .form-label {
+  color:darkcyan;
+} */
+
+
+/* header, .project:not(:last-child) {
+  border-bottom: 1px solid rgb(27, 8, 8);
+} */
 
 /**code to reset styling**/
 #nametag {
@@ -155,137 +280,4 @@ header, .project:not(:last-child) {
   /* basic modern patch */
   all: initial;
   all: unset;
-}
-
-.deletediv{
-  text-align: right;
-}
-
-.deletebtn {
-  height: 35px;
-  color:black;
-  background-color: red;
-}
-
-.editbtn {
-  height: 35px;
-  color:black;
-  background-color: green;
-}
-
-body {
-  background-image: linear-gradient(180deg, #DCDCDC, #E0FFFF);
-  background-repeat: repeat;
-  height: 150vh;
-}
-
-
-
-.navbar {
-  background-image: linear-gradient(to right, #FFC0CB , #87CEFA);
-  
-  
-  border: 2px solid grey;
-}
-
-
-.form-label {
-  color:darkcyan;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-}
-
-.comment-form {
-  margin-bottom: 5%;
-}
-
-.comment {
-  padding: 1%;
-  margin-bottom: 1%;
-}
-
-.comment:nth-child(odd) {
-  background-color: #fff5eb;
-}
-
-a {
-  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
-  border: none;
-  color: black;
-  border: 1px solid	#FFE4E1;
-  border-radius: 18px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: bold;
-}
-
-.btn {
-  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
-  border: none;
-  color: black;
-  border: 1px solid	#FFE4E1;
-  border-radius: 18px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: bold;
-  
-}
-
-.no-button {
-  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
-  border: none;
-  color: black;
-  border: 1px solid	#FFE4E1;
-  border-radius: 18px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: bold;
-}
-
-.navbar-brand {
-  background-image: linear-gradient(to right, #AFD275 , #B0E0E6);/* Green */
-  border: none;
-  color: black;
-  border: 1px solid	#FFE4E1;
-  border-radius: 18px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: bold;
-}
-
-.form-check-label {
-  color:black; 
-}
-
-.dropdown-menu {
-  background-color:#FFC0CB;
-}
-
-.container1 {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  padding: 15px 32px;
-  height:80px;   
-  background-image: linear-gradient(to right, #FFC0CB , #87CEFA);
-  color: black;
-  border: 1px solid	#000000;
-  text-align: center;
-  
-}
-
-.btn1-floating {
-  background-color: none;
 }

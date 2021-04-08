@@ -1,38 +1,29 @@
-
-
-<!-- Loop over each object in the projects array -->
-{{#each pets as |pet| }}
-<div class="row mb-4 project">
-  
-  <div class="col-md-3">
-    <img src="{{pet.imageUrl}}" alt="No picture added" width="200" height="200" class="rounded p-2"/>
+<!--template card for homepage-->
+<div class="card-deck">
+  <!-- Loop over each object in the projects array -->
+  {{#each pets as |pet| }}
+  <div class="card project card">
+    <img src="{{pet.imageUrl}}" alt="No picture added" class="card-img-top img-fluid"/>
+     {{!-- max-width="250" height="400" --}}
+    <div class="card-body">
+      <h5 class="card-title"><a href="/pet/{{pet.id}}">{{pet.name}}</a></h5>
+      <p class="card-text">{{pet.description}}</p>
+      {{#if pet.good_with_cats}}
+      <p class="card-text">&#9989; Good with cats!</p>
+      {{/if}}
+      {{#if pet.good_with_dogs}}
+      <p class="card-text">&#9989; Good with dogs!</p>
+      {{/if}}
+      {{#if pet.good_with_kids}}
+      <p class="card-text">&#9989; Good with kids!</p>
+      {{/if}}
+      {{#if pet.adoptable_now}}
+      <p class="card-text">&#9989; Adoptable now!</p>
+      {{/if}}
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">This {{pet.animal_type}} is a {{pet.breed}} added by {{pet.user.name}} on {{format_date pet.date_posted}}</small>
+    </div>
   </div>
-  <div class="col-md-3">
-    <h2>
-  
-      <a href="/pet/{{pet.id}}">{{pet.name}}</a>
-    </h2>
-    {{#if pet.good_with_cats}}
-    <p>&#9989; Good with cats!</p>
-    {{/if}}
-    {{#if pet.good_with_dogs}}
-    <p>&#9989; Good with dogs!</p>
-    {{/if}}
-    {{#if pet.good_with_kids}}
-    <p>&#9989; Good with kids!</p>
-    {{/if}}
-    {{#if pet.adoptable_now}}
-    <p>&#9989; Adoptable now!</p>
-    {{/if}}
-  </div>
-  <div class="col-md-6"> 
-    <p>
-      This {{pet.animal_type}} is a {{pet.breed}} created by {{pet.user.name}} on {{format_date pet.date_posted}}
-    </p>
-    <p>
-      {{pet.description}}
-    </p>
-  </div>
-  
+  {{/each}}
 </div>
-{{/each}}
