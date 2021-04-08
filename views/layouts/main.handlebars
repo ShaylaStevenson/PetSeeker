@@ -11,11 +11,10 @@
 
 <body>
 
-  <!--<div class="flex-column justify-space-around"> -->
-
+  <!-- <div class="flex-column justify-space-around"> -->
     <header>
       <nav class="navbar navbar-fluid navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Pet Seeker Palooza</a>
+        <a class="navbar-brand" id="nametag" href="/"><h3><strong>Pet Seeker Palooza</strong></h3></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,53 +29,11 @@
               <a href="/login">login</a>
               {{/if}}
             </li>
-      
-            <li class="nav-item dropdown">
-              <form class="form-inline my-2 my-lg-0">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <div class="form-check dropdown-item">
-                <input class="form-check-input" type="checkbox" value="" id="adoptableNow">
-                <label class="form-check-label" for="adoptableNow">
-                  Adoptable now
-                </label>
-              </div>
-
-              <div class="form-check dropdown-item">
-                <input class="form-check-input" type="checkbox" value="" id="goodWithKids">
-                <label class="form-check-label" for="goodWithKids">
-                  Good with kids
-                </label>
-              </div>
-
-              <div class="form-check dropdown-item">
-                <input class="form-check-input" type="checkbox" value="" id="goodWithDogs">
-                <label class="form-check-label" for="goodWithDogs">
-                  Good with dogs
-                </label>
-              </div>
-
-              <div class="form-check dropdown-item">
-                <input class="form-check-input" type="checkbox" value="" id="goodWithCats">
-                <label class="form-check-label" for="goodWithCats">
-                  Good with cats
-                </label>
-              </div>
-
-              <div class="form-check dropdown-item">
-                <input class="form-check-input" type="checkbox" value="" id="specialNeeds">
-                <label class="form-check-label" for="specialNeeds">
-                  Special Needs
-                </label>
-              </div>
-            </div>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </li>
-        
-
+            <li class="nav-item">
+              {{#if logged_in}}
+              <a href="/profile/new">Add Pet</a>
+              {{/if}}
+            </li>
           </ul>
         
       </nav>
