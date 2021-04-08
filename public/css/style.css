@@ -125,84 +125,6 @@ a {
   background-color: red;
 }
 
-<<<<<<< HEAD
-a {
-  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
-  border: none;
-  color: black;
-  border: 1px solid	#FFE4E1;
-  border-radius: 18px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: bold;
-}
-
-.btn {
-  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
-  border: none;
-  color: black;
-  border: 1px solid	#FFE4E1;
-  border-radius: 18px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: bold;
-  
-}
-
-.no-button {
-  background-image: linear-gradient(to right, #AFD275 , #87CEFA);
-  border: none;
-  color: black;
-  border: 1px solid	#FFE4E1;
-  border-radius: 18px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: bold;
-}
-
-.navbar-brand {
-  background-image: linear-gradient(to right, #AFD275 , #B0E0E6);/* Green */
-  border: none;
-  color: black;
-  border: 1px solid	#FFE4E1;
-  border-radius: 18px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: bold;
-}
-
-.form-check-label {
-  color:black; 
-}
-
-.dropdown-menu {
-  background-color:#FFC0CB;
-}
-
-.container1 {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  padding: 15px 32px;
-  height:80px;   
-  background-image: linear-gradient(to right, #FFC0CB , #87CEFA);
-  color: black;
-  border: 1px solid	#000000;
-  text-align: center;
-  
-}
-
-.btn1-floating {
-  background-color: none;
-=======
 /* new pet form styling */
 .form-check-label {
   color:black; 
@@ -408,5 +330,4 @@ a {
   /* basic modern patch */
   all: initial;
   all: unset;
->>>>>>> 1c827d70f3009ba382f6530974b0da7beb94a6cc
 }
