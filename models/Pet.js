@@ -90,6 +90,15 @@ Pet.init(
         model: 'user',
         key: 'id',
       },
+    },
+  // image fields
+    imageUrl: {
+      type: DataTypes.STRING,
+      allowNull: true, 
+    },
+    imageId: {
+      type: DataTypes.STRING,
+      allowNull: true,
     }
   },
   {
