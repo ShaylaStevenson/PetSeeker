@@ -1,29 +1,35 @@
-<!--template card for homepage-->
-<div class="card-deck">
-  <!-- Loop over each object in the projects array -->
-  {{#each pets as |pet| }}
-  <div class="card project card">
-    <img src="{{pet.imageUrl}}" alt="No picture added" class="card-img-top img-fluid"/>
-     {{!-- max-width="250" height="400" --}}
-    <div class="card-body">
-      <h5 class="card-title"><a href="/pet/{{pet.id}}">{{pet.name}}</a></h5>
-      <p class="card-text">{{pet.description}}</p>
-      {{#if pet.good_with_cats}}
-      <p class="card-text">&#9989; Good with cats!</p>
-      {{/if}}
-      {{#if pet.good_with_dogs}}
-      <p class="card-text">&#9989; Good with dogs!</p>
-      {{/if}}
-      {{#if pet.good_with_kids}}
-      <p class="card-text">&#9989; Good with kids!</p>
-      {{/if}}
-      {{#if pet.adoptable_now}}
-      <p class="card-text">&#9989; Adoptable now!</p>
-      {{/if}}
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">This {{pet.animal_type}} is a {{pet.breed}} added by {{pet.user.name}} on {{format_date pet.date_posted}}</small>
+<div class="container">
+  <div class="row">
+    <!--template card for homepage-->
+    <div class="card-deck">
+      <!-- Loop over each object in the projects array -->
+      {{#each pets as |pet| }}
+      <div class="col-md-4 mt-2 px-0">
+        <div class="card project" style="height:830px;">
+          <img src="{{pet.imageUrl}}" alt="No picture added" class="card-img-top img-fluid"/>
+          {{!-- max-width="250" height="400" --}}
+          <div class="card-body">
+            <h5 class="card-title"><a href="/pet/{{pet.id}}">{{pet.name}}</a></h5>
+            <p class="card-text">{{pet.description}}</p>
+            {{#if pet.good_with_cats}}
+            <p class="card-text">&#9989; Good with cats!</p>
+            {{/if}}
+            {{#if pet.good_with_dogs}}
+            <p class="card-text">&#9989; Good with dogs!</p>
+            {{/if}}
+            {{#if pet.good_with_kids}}
+            <p class="card-text">&#9989; Good with kids!</p>
+            {{/if}}
+            {{#if pet.adoptable_now}}
+            <p class="card-text">&#9989; Adoptable now!</p>
+            {{/if}}
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">This {{pet.animal_type}} is a {{pet.breed}} added by {{pet.user.name}} on {{format_date pet.date_posted}}</small>
+          </div>
+        </div>
+      </div>
+      {{/each}}
     </div>
   </div>
-  {{/each}}
 </div>

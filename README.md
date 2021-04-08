@@ -3,8 +3,7 @@
 ## Table of Contents
 
 * [About-project](#Description)
-* [Picture1](#Picture1)
-* [Picture2](#Picture2)
+* [Images](#Images)
 * [Instalation](#Instalation)
 * [Project Requirements](#Project-Requirements)
 * [Contributor](#Contributor)
@@ -21,11 +20,10 @@ This app has a homepage that displays the basics of each pet posted on Pet Seeke
 Future developmet plans include adding a search funciton to allow users to peruse the pets on the app, searching for characteristics they want in pets, an ability to favorite animals, and more species options. 
 
 
-### Picture:
-![Picture](./img/1.png) 
+### Images:
+![demo-image-home](./img/demo-image-home.png) 
 
-### Picture:
-![Picture](./img/2.png) 
+![demo-image-form](./img/demo-img-form.png) 
 
 ### Instalation:
 * In the console run - node seeds/seed.js
